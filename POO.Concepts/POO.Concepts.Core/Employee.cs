@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace POO.Concepts.Core;
 
-namespace POO.Concepts.Core;
-
-public abstract class Employee
+public abstract class Employee : IPay
 {
     public int Id { get; set; }
     public string Firstname { get; set; } = null!;
@@ -19,6 +13,6 @@ public abstract class Employee
 
     public override string ToString() =>
         $"{Id}\t{Firstname} {Lastname}\n\t" +
-        $"Hire date..: {HireDate}\n\t" +
-        $"Salary.....: {GetValueToPay():C2}";
+        $"Born date.....: {BornDate}\n\t" +
+        $"Hire date.....: {HireDate}";
 }

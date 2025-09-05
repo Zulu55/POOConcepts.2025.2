@@ -23,39 +23,24 @@ public class Date
     public int Day
     {
         get => _day;
-        set
-        {
-            _day = ValidateDay(value);
-        }
+        set => _day = ValidateDay(value);
     }
 
     public int Month
     {
         get => _month;
-        set
-        {
-            _month = ValidateMonth(value);
-        }
+        set => _month = ValidateMonth(value);
     }
 
     public int Year
     {
         get => _year;
-        set
-        {
-            _year = ValidateYear(value);
-        }
+        set => _year = ValidateYear(value);
     }
 
-    public override string ToString()
-    {
-        return $"{Year:0000}/{Month:00}/{Day:00}";
-    }
+    public override string ToString() => $"{Year:0000}/{Month:00}/{Day:00}";
 
-    private bool IsLeapYear(int year)
-    {
-        return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
-    }
+    private bool IsLeapYear(int year) => (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
 
     private int ValidateYear(int year)
     {
